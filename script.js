@@ -1,0 +1,2 @@
+let content = document.querySelector('.discussContentPlain > div');
+content.innerHTML = content.innerHTML.replace(/Image:<a href="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)" target="_blank">(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)<\/a>/g, match => `<img src="${match.slice(15, match.indexOf('" target'))}"></img>`);
